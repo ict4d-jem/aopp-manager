@@ -1,5 +1,5 @@
 <template>
-        <div style="padding-left: 50px;">
+        <div id="stats-container">
             <h4>{{title}}</h4>
             <p v-if="selectedRegion == ''">Click on a region to start...</p>
             <p v-if="selectedRegion !== ''">Crop Types distribution</p>

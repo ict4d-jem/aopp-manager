@@ -1,6 +1,9 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
 
+$break-tablet: 767px;
+$break-laptop: 992px;
+
 %centered-container {
   max-width: 800px;
   margin: 0 auto;
@@ -35,8 +38,13 @@ header {
   }
 }
 #user-explorer-container {
-  margin-top: 50px;
-  @extend %centered-container;
+  margin: 50px 0;
+
+  #user-explorer {
+
+    margin: 0 50px;
+
+  }
 
   .card-body {
     max-height: 600px;
@@ -48,6 +56,21 @@ header {
 
   .vl-map {
     height: 500px;
+  }
+}
+
+#stats-container {
+  position: fixed;
+  top: 110px;
+  left: 50px;
+  min-width: 300px;
+
+  @media(max-width: $break-laptop) {
+    position: relative;
+    min-width: 0;
+    top: 0;
+    left: 0;
+    margin: 20px 50px;
   }
 }
 
