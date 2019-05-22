@@ -17,6 +17,6 @@ const path = require('path')
  }
  }
  */
-module.exports = {
-    publicPath: "/aopp/"
-}
+// module.exports = {
+//     publicPath: "/aopp/"
+// }
