@@ -1,8 +1,8 @@
 <template>
         <div style="padding-left: 50px;">
             <h4>{{title}}</h4>
-
-            <p>Crop Types distribution</p>
+            <p v-if="selectedRegion == ''">Click on a region to start...</p>
+            <p v-if="selectedRegion !== ''">Crop Types distribution</p>
             <GChart
                     v-if="selectedRegion !== ''"
                     type="PieChart"
@@ -11,7 +11,7 @@
                     ref="cropTypegChart"
             />
 
-            <p>Crop Sizes distribution</p>
+            <p v-if="selectedRegion !== ''">Crop Sizes distribution</p>
             <GChart
                     type="PieChart"
                     :data="cropSizeData"
